@@ -17,7 +17,7 @@ function App() {
       <h1>Theme Creator</h1>
       <ColorForm onSubmit={handleAddColor} />
       {colors.map((color) => {
-        return <Color key={color.id} color={color} />;
+        return <Color key={color.id} color={contrastText} />;
       })}
     </>
   );

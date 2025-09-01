@@ -27,7 +27,7 @@ export default function ColorForm({
       <label>
         Contrast Text
         <ColorInput
-          id="ContrasText"
+          id="contrastText"
           type="text"
           defaultValue={Formkeys.contrastText}
         />

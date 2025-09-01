@@ -13,17 +13,17 @@ export default function ColorForm() {
     <form className="color-form" onSubmit={handlesubmit}>
       <label>
         Role
-        <input name="role" type="text" />
+        <input id="role" name="role" type="text" />
       </label>
       <label>
         Hex
-        <input name="hex" type="text" />
-        <input name="hex" type="color" />
+        <input id="hex" name="hex" type="text" />
+        <input id="hex" name="hex" type="color" />
       </label>
       <label>
         Contrast Text
-        <input name="hex" type="text" />
-        <input name="contrasText" type="color" />
+        <input id="ContrasText" name="ContrasText" type="text" />
+        <input id="ContrasText" name="contrasText" type="color" />
       </label>
 
       <button type="submit">ADD COLOR</button>

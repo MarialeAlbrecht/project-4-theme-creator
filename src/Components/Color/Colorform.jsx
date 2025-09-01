@@ -7,8 +7,8 @@ export default function ColorForm({
 }) {
   function handlesubmit(event) {
     event.preventDefault();
-    const FormData = new FormData(event.target);
-    const data = Object.fromEntries(FormData);
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
     console.log("form sumited", data);
     OnSubmit(data);
 

@@ -10,6 +10,7 @@ export default function ColorForm({
     const FormData = new FormData(event.target);
     const data = Object.fromEntries(FormData);
     console.log("form sumited", data);
+    OnSubmit(data);
 
     event.target.reset();
   }

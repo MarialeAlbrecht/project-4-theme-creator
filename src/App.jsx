@@ -9,7 +9,7 @@ function App() {
   const [colors, setColors] = useState(initialColors);
   function handleAddColor(newColor) {
     const colorWithId = { ...newColor, id: uid() };
-    setColors([...colors, colorWithId]);
+    setColors([colorWithId, ...colors]);
   }
 
   return (
@@ -17,7 +17,7 @@ function App() {
       <h1>Theme Creator</h1>
       <ColorForm onSubmit={handleAddColor} />
       {colors.map((color) => {
-        return <Color key={color.id} color={contrastText} />;
+        return <Color key={color.id} color={color} />;
       })}
     </>
   );

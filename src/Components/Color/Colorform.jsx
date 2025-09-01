@@ -23,7 +23,6 @@ export default function ColorForm({
       <label>
         Hex
         <ColorInput id="hex" type="text" defaultValue={Formkeys.hex} />
-        <ColorInput id="hex" type="color" />
       </label>
       <label>
         Contrast Text
@@ -32,7 +31,6 @@ export default function ColorForm({
           type="text"
           defaultValue={Formkeys.contrastText}
         />
-        <ColorInput id="ContrasText" type="color" />
       </label>
 
       <button type="submit">ADD COLOR</button>

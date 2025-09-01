@@ -6,10 +6,11 @@ import { uid } from "uid";
 import { useState } from "react";
 
 function App() {
-const [colors,setColors]= useState(initialColors);
+  const [colors, setColors] = useState(initialColors);
   function handleAddColor(newColor) {
     const colorWithId = { ...newColor, id: uid() };
     setColors([...colors, colorWithId]);
+  }
 
   return (
     <>

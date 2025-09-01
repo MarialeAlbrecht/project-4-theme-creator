@@ -10,17 +10,19 @@ export default function ColorForm() {
     event.target.reset();
   }
   return (
-    <form onSubmit={handlesubmit}>
-      <label className="color-card">
+    <form className="color-form" onSubmit={handlesubmit}>
+      <label>
         Role
         <input name="role" type="text" />
       </label>
-      <label className="color-card-headline">
+      <label>
         Hex
+        <input name="hex" type="text" />
         <input name="hex" type="color" />
       </label>
       <label>
         Contrast Text
+        <input name="hex" type="text" />
         <input name="contrasText" type="color" />
       </label>
 

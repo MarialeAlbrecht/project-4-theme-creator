@@ -9,3 +9,8 @@
   background: black;
   color: white;
 }
+.color-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

@@ -14,7 +14,9 @@ export default function ColorInput({ id, defaultValue }) {
         name={id}
         value={input}
         onChange={handleInput}
+        placeholder="#000"
       />
+      <input type="color" value={input} onChange={handleInput} />
     </>
   );
 }

@@ -30,6 +30,7 @@ export default function ColorForm({
           id="contrastText"
           type="text"
           defaultValue={Formkeys.contrastText}
+          className="color-text"
         />
       </label>
 

@@ -14,3 +14,6 @@
   flex-direction: column;
   gap: 1rem;
 }
+.color-text {
+  color: white;
+}

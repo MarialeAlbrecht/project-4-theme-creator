@@ -6,7 +6,7 @@ export default function Color({ color }) {
       className="color-card"
       style={{
         background: color.hex,
-        color: color.contrastText,
+        color: "white",
       }}
     >
       <h3 className="color-card-headline">{color.hex}</h3>

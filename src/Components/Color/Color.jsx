@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./Color.css";
+import ColorForm from "./Colorform";
 
-export default function Color({ color, ondelete }) {
+export default function Color({ color, ondelete, update }) {
   const [confirmDelete, setConfirmDelete] = useState(false);
+
+const[confirmUpdate, setConfirmUpdate]=useState(true);
+
   return (
     <div
       className="color-card"
@@ -30,7 +34,9 @@ export default function Color({ color, ondelete }) {
           <button type="submit" onClick={() => setConfirmDelete(true)}>
             Delete
           </button>
-          <button type="submit" onClick={() => setConfirmDelete(true)}>
+              <button type= "submit" onClick={()= setConfirmUpdate(true)}>Update</button>
+          
+              <button type= "submit" onClick={()=> setConfirmUpdate(false)}>Cancel
             Update
           </button>
         </>

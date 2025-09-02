@@ -14,7 +14,13 @@
   align-items: flex-start;
   flex-direction: column;
   margin-bottom: 10px;
-  gap: 1rem;
+  /* gap: 1rem; */
+}
+.color-form label {
+  display: block;
+}
+.color-form input {
+  display: block;
 }
 
 .color-card-hightlight {

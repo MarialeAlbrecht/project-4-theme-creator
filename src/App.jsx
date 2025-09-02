@@ -20,7 +20,7 @@ function App() {
     setColors((previousColors) => {
       previousColors.map((previousColor) =>
         previousColor.id === id
-          ? { updatedColor, ...previousColor }
+          ? { ...previousColor, updatedColor }
           : previousColor
       );
     });
@@ -39,7 +39,7 @@ function App() {
               key={color.id}
               color={color}
               ondelete={handleDelete}
-              updatedColor={handleUpdate}
+              update={handleUpdate}
             />
           );
         })

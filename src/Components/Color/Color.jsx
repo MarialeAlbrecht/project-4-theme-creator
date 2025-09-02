@@ -34,11 +34,26 @@ export default function Color({ color, ondelete, update }) {
           <button type="submit" onClick={() => setConfirmDelete(true)}>
             Delete
           </button>
-          {!confirmEdit ? (
+          {!confirmEdit && (
             <button type="button" onClick={() => setConfirmEdit(true)}>
               Edit
             </button>
-          ) : null}
+          )}
+          {confirmEdit && (
+            <>
+              <ColorForm
+                defaultValue={color}
+                onSubmit={(updatedColor) => {
+                  update(color.id, updatedColor);
+                  setConfirmEdit(false);
+                }}
+                submitLabel="Update"
+              />
+              <button type="button" onClick={() => setConfirmEdit(false)}>
+                Cancel
+              </button>
+            </>
+          )}
         </>
       )}
     </div>

@@ -3,7 +3,7 @@ import ColorInput from "./ColorInput";
 
 export default function ColorForm({
   onSubmit,
-  Formkeys = { role: "add a role", hex: "#000", contrastText: "#000" },
+  Formkeys = { role: "add a role", hex: "#000000", contrastText: "#000000" },
 }) {
   function handlesubmit(event) {
     event.preventDefault();

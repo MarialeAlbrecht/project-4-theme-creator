@@ -12,7 +12,7 @@ export default function Color({ color, ondelete, update }) {
       className="color-card"
       style={{
         background: color.hex,
-        color: "white",
+        color: color.contrastText,
       }}
     >
       <h3 className="color-card-headline">{color.hex}</h3>

@@ -42,7 +42,7 @@ export default function Color({ color, ondelete, update }) {
           {confirmEdit && (
             <>
               <ColorForm
-                defaultValue={color}
+                Formkeys={color}
                 onSubmit={(updatedColor) => {
                   update(color.id, updatedColor);
                   setConfirmEdit(false);

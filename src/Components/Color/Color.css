@@ -11,6 +11,21 @@
 }
 .color-form {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
+  margin-bottom: 10px;
+  /* gap: 1rem; */
+}
+.color-form label {
+  display: block;
+}
+.color-form input {
+  display: block;
+}
+
+.color-card-hightlight {
+  display: inline;
+  padding: 2px 6px;
+  background: black;
+  color: white;
 }

@@ -24,7 +24,7 @@ function App() {
         <p>Add a new color.</p>
       ) : (
         colors.map((color) => {
-          return <Color key={color.id} color={color} onDelete={handleDelete} />;
+          return <Color key={color.id} color={color} ondelete={handleDelete} />;
         })
       )}
     </>

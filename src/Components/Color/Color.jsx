@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Color.css";
 
-export default function Color({ color, onDelete }) {
+export default function Color({ color, ondelete }) {
   const [confirmDelete, setConfirmDelete] = useState(false);
   return (
     <div
@@ -21,7 +21,7 @@ export default function Color({ color, onDelete }) {
           <button type="submit" onClick={() => setConfirmDelete(false)}>
             Cancel
           </button>
-          <button type="submit" onClick={() => onDelete(color.id)}>
+          <button type="submit" onClick={() => ondelete(color.id)}>
             Delete
           </button>
         </>

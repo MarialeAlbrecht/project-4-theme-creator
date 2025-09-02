@@ -5,7 +5,7 @@ import ColorForm from "./Colorform";
 export default function Color({ color, ondelete, update }) {
   const [confirmDelete, setConfirmDelete] = useState(false);
 
-  const [confirmUpdate, setConfirmUpdate] = useState(true);
+  const [confirmEdit, setConfirmEdit] = useState(false);
 
   return (
     <div
@@ -34,13 +34,11 @@ export default function Color({ color, ondelete, update }) {
           <button type="submit" onClick={() => setConfirmDelete(true)}>
             Delete
           </button>
-          <button type="submit" onClick={() => setConfirmUpdate(true)}>
-            Update
-          </button>
-
-          <button type="submit" onClick={() => setConfirmUpdate(false)}>
-            Cancel Update
-          </button>
+          {!confirmEdit ? (
+            <button type="button" onClick={() => setConfirmEdit(true)}>
+              Edit
+            </button>
+          ) : null}
         </>
       )}
     </div>

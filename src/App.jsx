@@ -20,7 +20,7 @@ function App() {
     <>
       <h1>Theme Creator</h1>
       <ColorForm onSubmit={handleAddColor} />
-      {colors.lenght === 0 ? (
+      {colors.length === 0 ? (
         <p>Add a new color.</p>
       ) : (
         colors.map((color) => {

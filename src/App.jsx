@@ -17,13 +17,13 @@ function App() {
   }
 
   function handleUpdate(id, updatedColor) {
-    setColors((previousColors) => {
+    setColors((previousColors) =>
       previousColors.map((previousColor) =>
         previousColor.id === id
-          ? { ...previousColor, updatedColor }
+          ? { ...previousColor, ...updatedColor }
           : previousColor
-      );
-    });
+      )
+    );
   }
 
   return (

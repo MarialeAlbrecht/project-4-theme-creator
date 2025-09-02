@@ -18,7 +18,7 @@ export default function Color({ color, onDelete }) {
       {confirmDelete ? (
         <>
           <p className="color-card-hightlight">Really delete?</p>
-          <button type="submit" onClick={() => setConfirmDelete}>
+          <button type="submit" onClick={() => setConfirmDelete(false)}>
             Cancel
           </button>
           <button type="submit" onClick={() => onDelete(color.id)}>

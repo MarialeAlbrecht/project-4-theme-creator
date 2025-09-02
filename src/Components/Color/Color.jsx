@@ -26,9 +26,14 @@ export default function Color({ color, ondelete }) {
           </button>
         </>
       ) : (
-        <button type="submit" onClick={() => setConfirmDelete(true)}>
-          Delete
-        </button>
+        <>
+          <button type="submit" onClick={() => setConfirmDelete(true)}>
+            Delete
+          </button>
+          <button type="submit" onClick={() => setConfirmDelete(true)}>
+            Update
+          </button>
+        </>
       )}
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Color.css";
 import ColorForm from "./Colorform";
 
-export default function Color({ color, ondelete, update }) {
+export default function Color({ color, onDelete, update }) {
   // Added props ondelte and update. This props will be passed to the App.jsx. Ondelete had the values of the color.id and update has the values of the updated colors.
   const [confirmDelete, setConfirmDelete] = useState(false);
   //confirmDelete is a boolean that will change state. True will be set to delete the card and false to keep the card.
@@ -27,7 +27,7 @@ export default function Color({ color, ondelete, update }) {
           <button type="submit" onClick={() => setConfirmDelete(false)}>
             Cancel
           </button>
-          <button type="submit" onClick={() => ondelete(color.id)}>
+          <button type="submit" onClick={() => onDelete(color.id)}>
             Delete
           </button>
         </>
@@ -49,7 +49,7 @@ export default function Color({ color, ondelete, update }) {
             // && means render. If the condition applies.
             <>
               <ColorForm
-                Formkeys={color}
+                formKeys={color}
                 onSubmit={(updatedColor) => {
                   update(color.id, updatedColor);
                   setConfirmEdit(false);

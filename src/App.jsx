@@ -4,12 +4,25 @@ import ColorForm from "./Components/Color/Colorform"; //Imports the props of the
 import "./App.css";
 import { uid } from "uid"; // needed for generationg unique ids.
 import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
   // The state of color will change. The default is the initial array of colors.
-  //The function handleAddcolor, this will add the new colors and role and link a unique id.
   //setColors will show the new color first and then the rest of the colors below.
-  const [colors, setColors] = useState(initialColors);
+  const [colors, setColors] = useState(() => {
+    // We save the colors in savedColors as a string.
+    // We will return the saved colors as a array (parse) if not we will just show the initial Colors.
+    const savedColors = localStorage.getItem("colors");
+    return savedColors ? JSON.parse(savedColors) : initialColors;
+  });
+
+  //We save savedcolors in a string to be used by the localStorage.
+  //This will make colors have the stored information.
+  useEffect(() => {
+    localStorage.setItem("colors", JSON.stringify(colors));
+  }, [colors]);
+
+  //The function handleAddcolor, this will add the new colors and role and link a unique id.
   function handleAddColor(newColor) {
     const colorWithId = { ...newColor, id: uid() };
     setColors([colorWithId, ...colors]);
@@ -50,7 +63,7 @@ function App() {
             <Color
               key={color.id}
               color={color}
-              ondelete={handleDelete}
+              onDelete={handleDelete}
               update={handleUpdate}
             />
           );

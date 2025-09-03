@@ -62,7 +62,7 @@ function App() {
             <Color
               key={color.id}
               color={color}
-              ondelete={handleDelete}
+              onDelete={handleDelete}
               update={handleUpdate}
             />
           );

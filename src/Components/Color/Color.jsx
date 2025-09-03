@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Color.css";
 import ColorForm from "./Colorform";
+import Copy from "./Clipboard";
 
 export default function Color({ color, onDelete, update }) {
   // Added props ondelte and update. This props will be passed to the App.jsx. Ondelete had the values of the color.id and update has the values of the updated colors.
@@ -8,6 +9,9 @@ export default function Color({ color, onDelete, update }) {
   //confirmDelete is a boolean that will change state. True will be set to delete the card and false to keep the card.
   const [confirmEdit, setConfirmEdit] = useState(false);
   // confirmEdit is also a boolean that will change state. True will open the update form and false will do nothing.
+
+  //Imported the Copy, so it can be used in the card. The value to be in the prop is the color.hex.
+
   return (
     <div
       className="color-card"
@@ -17,6 +21,7 @@ export default function Color({ color, onDelete, update }) {
       }}
     >
       <h3 className="color-card-headline">{color.hex}</h3>
+      <Copy colorToCopy={color.hex} />
       <h4>{color.role}</h4>
       <p>contrast: {color.contrastText}</p>
 

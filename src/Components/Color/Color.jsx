@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Color.css";
 import ColorForm from "./Colorform";
+import Copy from "./Clipboard";
 
 export default function Color({ color, ondelete, update }) {
   // Added props ondelte and update. This props will be passed to the App.jsx. Ondelete had the values of the color.id and update has the values of the updated colors.
@@ -18,6 +19,7 @@ export default function Color({ color, ondelete, update }) {
       }}
     >
       <h3 className="color-card-headline">{color.hex}</h3>
+      <Copy colorToCopy={color.hex} />
       <h4>{color.role}</h4>
       <p>contrast: {color.contrastText}</p>
 

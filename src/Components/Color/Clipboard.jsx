@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Copy(colorToCopy) {
+export default function Copy({ colorToCopy }) {
   const [copyHex, setCopyHex] = useState(false);
 
   const handleCopy = () => {
@@ -12,8 +12,9 @@ export default function Copy(colorToCopy) {
   };
   return (
     <>
-      <button onClick={handleCopy}>Copy</button>
-      {copyHex && <button>Succesfully copied!</button>}
+      <button onClick={handleCopy}>
+        {copyHex ? "Successfully copied!" : "Copy"}
+      </button>
     </>
   );
 }

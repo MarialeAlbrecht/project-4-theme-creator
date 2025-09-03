@@ -8,6 +8,7 @@ export default function Color({ color, ondelete, update }) {
   //confirmDelete is a boolean that will change state. True will be set to delete the card and false to keep the card.
   const [confirmEdit, setConfirmEdit] = useState(false);
   // confirmEdit is also a boolean that will change state. True will open the update form and false will do nothing.
+
   return (
     <div
       className="color-card"

@@ -4,7 +4,7 @@ import ColorInput from "./ColorInput";
 export default function ColorForm({
   //ColorForm is a function that holds the onsubmit and Fomrkeys props.
   onSubmit,
-  Formkeys = { role: "add a role", hex: "#000000", contrastText: "#000000" },
+  formKeys = { role: "add a role", hex: "#000000", contrastText: "#000000" },
 }) {
   function handlesubmit(event) {
     event.preventDefault();
@@ -21,18 +21,18 @@ export default function ColorForm({
     <form className="color-form" onSubmit={handlesubmit}>
       <label>
         Role
-        <input id="role" name="role" type="text" defaultValue={Formkeys.role} />
+        <input id="role" name="role" type="text" defaultValue={formKeys.role} />
       </label>
       <label>
         Hex
-        <ColorInput id="hex" type="text" defaultValue={Formkeys.hex} />
+        <ColorInput id="hex" type="text" defaultValue={formKeys.hex} />
       </label>
       <label>
         Contrast Text
         <ColorInput
           id="contrastText"
           type="text"
-          defaultValue={Formkeys.contrastText}
+          defaultValue={formKeys.contrastText}
         />
       </label>
 

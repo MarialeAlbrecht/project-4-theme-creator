@@ -10,6 +10,8 @@ export default function Color({ color, ondelete, update }) {
   const [confirmEdit, setConfirmEdit] = useState(false);
   // confirmEdit is also a boolean that will change state. True will open the update form and false will do nothing.
 
+  //Imported the Copy, so it can be used in the card. The value to be in the prop is the color.hex.
+
   return (
     <div
       className="color-card"

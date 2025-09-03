@@ -17,6 +17,7 @@ function App() {
   });
 
   //We save savedcolors in a string to be used by the localStorage.
+  //This will make colors have the stored information.
   useEffect(() => {
     localStorage.setItem("colors", JSON.stringify(colors));
   }, [colors]);
